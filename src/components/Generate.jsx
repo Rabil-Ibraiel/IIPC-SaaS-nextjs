@@ -9,7 +9,7 @@ import { TiDelete } from "react-icons/ti";
 
 const Generate = ({ item = {}, cookieDelete }) => {
   const [invoiceItem, setInvoiceItem] = useState(item);
-  console.log(invoiceItem);
+  console.log(Object.keys(invoiceItem));
 
   const [items, setItems] = useState(
     invoiceItem.items ? invoiceItem.items : []
@@ -36,12 +36,14 @@ const Generate = ({ item = {}, cookieDelete }) => {
       <h1 className="title mb-12">Generate Your Invoice!</h1>
 
       <div className=" w-full lg:w-[70rem] py-12 flex flex-col">
-        <button
-          onClick={handleRemove}
-          className="text-text bg-accent py-2 px-12 rounded-lg text-xl font-bold self-end mb-6 mr-12"
-        >
-          Reset Invoice Form
-        </button>
+        {Object.keys(invoiceItem).length > 0 && (
+          <button
+            onClick={handleRemove}
+            className="text-text bg-accent py-2 px-12 rounded-lg text-xl font-bold self-end mb-6 mr-12"
+          >
+            Reset Invoice Form
+          </button>
+        )}
         <form
           ref={ref}
           action={createInvoicePdf}
@@ -130,7 +132,7 @@ const Generate = ({ item = {}, cookieDelete }) => {
                 defaultValue={items.length}
               />
               {items.map((item, index) => (
-                <div className="border border-primary/60 p-2 rounded">
+                <div key={item.itemName} className="border border-primary/60 p-2 rounded">
                   <div className="flex items-center justify-between mb-6">
                     <label className=" uppercase text-lg rounded bg-accent text-text px-2">
                       Item {index + 1}:
@@ -219,7 +221,7 @@ const Generate = ({ item = {}, cookieDelete }) => {
 
               <div className="flex items-center gap-6 flex-col md:flex-row mt-6">
                 {themes.map((item, index) => (
-                  <div
+                  <div key={item}
                     className={`flex flex-col  ${
                       theme === item &&
                       "bg-primary px-4 pt-3 pb-4 md:pb-1 rounded overflow-hidden"

@@ -14,7 +14,7 @@ const InvoiceDoucmentContainer = ({ item }) => {
         <div className="flex flex-col md:flex-row items-center justify-center gap-12 h-full md:h-[399px] w-full ">
           <PDFViewer
             showToolbar={false}
-            className="h-1/2 w-full md:w-1/3 md:h-[399px]"
+            className="h-1/2 w-full md:w-1/3 md:h-[399px] border-4 rounded border-secondary"
           >
             <InvoiceDocument item={item} />
           </PDFViewer>
@@ -24,7 +24,7 @@ const InvoiceDoucmentContainer = ({ item }) => {
               {item.companyName}'s Invoice
             </h2>
 
-            <div className="flex flex-col items-start gap-2 md:gap-0 mt-8 md:mt-0">
+            <div className="flex flex-col items-start gap-2 md:gap-4 mt-8 md:mt-0">
               <Link
                 className="flex items-center gap-2 text-xl md:text-2xl md:mt-8 font-medium bg-primary text-black py-1 px-4 w-full md:w-fit  justify-center md:py-2 md:px-12 rounded"
                 href={"/generate"}
@@ -35,9 +35,9 @@ const InvoiceDoucmentContainer = ({ item }) => {
               <PDFDownloadLink
                 document={<InvoiceDocument item={item} />}
                 fileName={item.InvoiceName}
-                className="w-full"
+                className="w-full md:w-fit md:h-fit"
               >
-                <button className="text-xl md:text-5xl md:mt-4 font-extrabold bg-bg text-text py-2 md:px-12 rounded flex items-center w-full md:w-fit  justify-center">
+                <button className="text-xl md:text-5xl font-extrabold bg-bg text-text py-2 md:px-12 rounded flex items-center w-full md:w-fit  justify-center">
                   Download
                 </button>
               </PDFDownloadLink>

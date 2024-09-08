@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Hero = () => {
@@ -20,9 +21,9 @@ const Hero = () => {
             professional. Start saving time today!
           </p>
 
-          <button className="button absolute -bottom-6 text-lg lg:text-2xl">
+          <Link href="/generate" className="button absolute z-50 -bottom-6 text-lg lg:text-2xl">
             Get for free
-          </button>
+          </Link>
         </div>
       </div>
     </div>

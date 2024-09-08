@@ -52,7 +52,7 @@ const Header = () => {
                 {item.name}
               </Link>
             ))}
-            <button className="button">Get for free</button>
+            <Link href="/generate" className="button">Get for free</Link>
           </div>
         </div>
       </div>
