@@ -276,7 +276,7 @@ const InvoiceDocument = ({ item }) => {
       <Page size="A4" style={styles.page}>
         {/* Header */}
         <View style={styles.header}>
-          <Text style={styles.headerText}>{item.companyName}'s Invoice</Text>
+          <Text style={styles.headerText}>{item.companyName}&apos;s Invoice</Text>
         </View>
 
         {/* Invoice Info */}

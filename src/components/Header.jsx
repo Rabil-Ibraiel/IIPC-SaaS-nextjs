@@ -48,7 +48,7 @@ const Header = () => {
             } md:flex items-center gap-6 text-xl absolute md:static top-12 right-8 rounded-s-lg rounded-ee-lg  flex-col md:flex-row justify-center w-48 py-12 md:w-full md:bg-transparent bg-black overflow-hidden select-none`}
           >
             {links.map((item) => (
-              <Link href={item.link} className="text-text/60 capitalize">
+              <Link key={item.name} href={item.link} className="text-text/60 capitalize">
                 {item.name}
               </Link>
             ))}

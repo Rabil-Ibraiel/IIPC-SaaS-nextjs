@@ -21,7 +21,7 @@ const InvoiceDoucmentContainer = ({ item }) => {
 
           <div className="w-full h-1/2 md:w-2/3 md:h-full flex flex-col md:justify-between ">
             <h2 className="mt-4 text-5xl font-extrabold">
-              {item.companyName}'s Invoice
+              {item.companyName}&apos;s Invoice
             </h2>
 
             <div className="flex flex-col items-start gap-2 md:gap-4 mt-8 md:mt-0">
