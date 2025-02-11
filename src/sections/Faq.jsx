@@ -61,7 +61,7 @@ const Faq = () => {
                     name=""
                     className={`text-4xl ${
                       open[`q${index + 1}`] ? "-rotate-45" : "rotate-0"
-                    } transition-all`}
+                    }`}
                   />
                 </span>
               </div>

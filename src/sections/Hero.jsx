@@ -5,11 +5,11 @@ const Hero = () => {
   return (
     <div
       id="about"
-      className="flex section h-screen items-center relative justify-center flex-col bg-gradient-to-b from-[#200D42] from-0% via-[#4F21A1] via-40%  to-transparent to-82%"
+      className="flex section lg:h-screen items-center relative justify-center flex-col bg-gradient-to-b from-[#200D42] from-0% via-[#4F21A1] via-40%  to-transparent to-82%"
     >
       <div className="mt-24 md:mt-4">
         <div className="container flex items-center justify-center flex-col">
-          <span className="feature">Version 2.0 is here</span>
+          <span className="feature">Early Access</span>
           <h1 className="title">
             Instant Invoice
             <br />
@@ -20,10 +20,6 @@ const Hero = () => {
             streamlines your billing process, making invoicing quick and
             professional. Start saving time today!
           </p>
-
-          <Link href="/generate" className="button absolute z-50 -bottom-6 text-lg lg:text-2xl">
-            Get for free
-          </Link>
         </div>
       </div>
     </div>

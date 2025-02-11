@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const Product = () => {
@@ -16,7 +17,9 @@ const Product = () => {
           businesses alike.
         </p>
 
-        <div className="w-full h-[50rem] bg-secondary/50 border-2 border-white"></div>
+        <div className="w-full h-[300px] md:h-[400px] lg:h-[650px] max-w-lg md:max-w-3xl lg:max-w-6xl bg-secondary/50 border-2 border-white relative overflow-hidden rounded-3xl">
+          <Image src={"/product.webp"} alt="" className="w-full h-full object-cover" fill/>
+        </div>
       </div>
     </div>
   );

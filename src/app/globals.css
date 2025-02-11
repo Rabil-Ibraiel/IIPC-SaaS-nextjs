@@ -3,21 +3,24 @@
 @tailwind utilities;
 
 @layer base {
+  *{
+    @apply scroll-smooth
+  }
+  
   body {
     @apply bg-bg text-text scroll-smooth; 
   }
 
-
   .title {
-    @apply text-6xl lg:text-8xl font-bold md:leading-normal md:tracking-wide text-center mt-6
+    @apply text-4xl md:text-5xl lg:text-7xl font-bold md:leading-normal md:tracking-wide text-center mt-6
   }
 
   .description{
-    @apply text-center max-w-96 lg:max-w-[40rem] text-xl lg:text-2xl text-text/85 mt-8 mb-24
+    @apply text-center max-w-96 lg:max-w-[40rem] text-sm md:text-base lg:text-lg text-text/85 mt-8 mb-16
   }
 
   .feature {
-    @apply border border-white/60 rounded-lg  px-2 lg:text-xl
+    @apply border border-white/60 rounded-lg  px-2 text-sm md:text-base lg:text-lg
   }
 
   .button{
